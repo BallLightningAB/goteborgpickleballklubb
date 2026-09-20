@@ -1,0 +1,88 @@
+pdd:
+  meta:
+    name: "Göteborg Pickleball Klubb – PDD"
+    code_name: "goteborgpickleballklubb-pdd"
+    version: "0.1.0"
+    repo: "https://github.com/BallLightningAB/goteborgpickleballklubb"
+    purpose: >-
+      Product Definition Document (PDD) for Göteborg Pickleball Klubb (GPK),
+      a newly formed non-profit association ("ideell förening") developing
+      pickleball in Göteborg and the surrounding region. This document is the
+      canonical technical reference for the club's website.
+    workflow_guide: "specs/memory-bank/memory-bank-usage.yaml"
+    owner:
+      organization: "Göteborg Pickleball Klubb (ideell förening)"
+      contact: "goteborgpickleballklubb@gmail.com"
+
+  product:
+    vision: |
+      A fast, mobile-first, single-page website in Swedish that:
+      - Collects membership interest via an embedded Google Form
+      - Refers visitors to the club's public WhatsApp invite
+      - Informs about the upcoming extra annual meeting (2026-10-24)
+      v1 has no database, login, member portal, payments, backend,
+      analytics or marketing tracking.
+
+  scope:
+    in_scope:
+      website:
+        - Fully static Astro build (no client-side JS in v1)
+        - One-pager sections: presentation, interest form (Google Forms
+          iframe), WhatsApp invite, extra annual meeting notice, footer
+        - Dedicated /integritet privacy information page
+        - Swedish language throughout (lang="sv")
+        - Central content/link config in src/config/site.ts
+        - Basic SEO: title, description, canonical, OG tags, robots.txt,
+          sitemap.xml
+    out_of_scope:
+      - Database, authentication, member portal, payments, backend
+      - Analytics or marketing tracking
+      - Protocol/minutes pages (minutes are shared in WhatsApp)
+      - Publishing to production or DNS changes (deferred)
+
+  architecture:
+    stack:
+      framework: "Astro 7 (output: static)"
+      styling: "Tailwind CSS v4 via @tailwindcss/vite"
+      fonts: "Archivo Variable, self-hosted via @fontsource-variable/archivo"
+      typecheck: "astro check (TypeScript 6.x – TS 7 lacks the programmatic API)"
+      lint_format: "Biome 2.5 + Ultracite conventions"
+      package_manager: "pnpm 10"
+      node: "24.x"
+      hosting: "Vercel (planned, static – no adapter required)"
+      domain: "goteborgpickleballklubb.com (registered at Namecheap)"
+    design:
+      palette_source: "Sampled from club logo (public/media/gpk-logo.jpg)"
+      tokens:
+        gpk-navy: "#062953"
+        gpk-navy-deep: "#012046"
+        gpk-gold: "#cc982f"
+        gpk-gold-bright: "#d9a547"
+        gpk-cream: "#faf6ec"
+        gpk-sky: "#eef2f7"
+      notes: >-
+        Gold is never used as text on white (contrast < 4.5:1). Buttons with
+        gold background always use navy-deep text. Logo file is currently a
+        1024x1024 JPG derived from the founder-provided artwork; replace with
+        a master PNG/SVG when available and update site.logo.src.
+    external_services:
+      google_form:
+        purpose: "Membership interest collection"
+        owner_account: "goteborgpickleballklubb@gmail.com"
+        embed_url_config_key: "site.googleForm.embedUrl"
+        settings: >-
+          "Samla in e-postadresser" = Svarsinmatning; no sign-in required;
+          responses linked to a private Google Sheet.
+      whatsapp:
+        purpose: "Public member chat invite"
+        config_key: "site.whatsappInviteUrl"
+    env:
+      gpk_frontend_client:
+        - note: "No env vars required in v1; all config lives in src/config/site.ts"
+
+  privacy:
+    controller: "Göteborg Pickleball Klubb"
+    contact: "goteborgpickleballklubb@gmail.com"
+    legal_basis_draft: "Samtycke (consent) – pending formal board confirmation"
+    retention_draft: "Pending board decision; page uses neutral wording meanwhile"
+    source_draft: "specs/current-changes/integritetsinformation-forslag.md"

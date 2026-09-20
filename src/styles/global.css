@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/standard.css";
+@import "@fontsource-variable/archivo/standard-italic.css";
+
+/* =============================================================================
+   Göteborg Pickleball Klubb – färgtokens samplade ur klubblogotypen
+   (public/media/gpk-logo.jpg, pixelsampling 2026-09-20)
+   ========================================================================== */
+
+@theme {
+	--color-gpk-navy: #062953;
+	--color-gpk-navy-deep: #012046;
+	--color-gpk-gold: #cc982f;
+	--color-gpk-gold-bright: #d9a547;
+	--color-gpk-cream: #faf6ec;
+	--color-gpk-sky: #eef2f7;
+
+	--font-sans:
+		"Archivo Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: white;
+	color: var(--color-gpk-navy-deep);
+}
+
+/* Rubriker: fet, något expanderad, kursiv – anspelar på logotypens "GPK" */
+h1,
+h2,
+h3 {
+	font-weight: 800;
+	font-stretch: 112%;
+	letter-spacing: -0.01em;
+	color: var(--color-gpk-navy-deep);
+	text-wrap: balance;
+}
+
+h1 {
+	font-style: italic;
+}
+
+/* Synlig och tydlig tangentbordsfokus (kontrast ≥ 3:1 mot bakgrunden) */
+:focus-visible {
+	outline: 3px solid var(--color-gpk-navy-deep);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* I den mörka WhatsApp-sektionen används guldring i stället */
+.bg-gpk-navy-deep :focus-visible {
+	outline-color: var(--color-gpk-gold);
+}
+
+/* Skip-link: osynlig tills den får fokus */
+.skip-link {
+	position: absolute;
+	left: 1rem;
+	top: -4rem;
+	z-index: 50;
+	border-radius: 9999px;
+	background: var(--color-gpk-navy-deep);
+	color: white;
+	padding: 0.625rem 1.25rem;
+	font-weight: 600;
+	text-decoration: none;
+	transition: top 120ms ease-out;
+}
+
+.skip-link:focus-visible {
+	top: 1rem;
+}

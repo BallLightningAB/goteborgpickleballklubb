@@ -1,0 +1,28 @@
+entries:
+  - date: "2026-09-20"
+    version: 0.1.0
+    issue: "#1"
+    commit: "pending"
+    status: done
+    title: "feat(site): GPK v1 – statisk ensideswebbplats med Astro + Tailwind v4"
+    details: |-
+      - Scaffolded Astro 7.3.2 static site (no adapter, zero client JS) with
+        Tailwind CSS 4.3.3 via @tailwindcss/vite and self-hosted Archivo
+        Variable font (Fontsource)
+      - Ported Ball Lightning harness: specs/memory-bank, specs/current-changes,
+        scripts/rotate-changelog.sh, .devin/rules (astro.md + ultracite.md),
+        .gitleaks.toml, .pre-commit-config.yaml, .github secret-scan + dependabot,
+        AGENTS.md, Biome/Ultracite conventions
+      - Central typed config in src/config/site.ts: Google Form embed/URL,
+        WhatsApp invite, meeting date, copy – with null-safe Swedish
+        placeholders instead of broken links/iframes
+      - One-pager sections: presentation, intresseanmälan (embedded Google
+        Form + new-window link), WhatsApp invite, extra årsmöte 2026-10-24,
+        footer with mailto + /integritet link
+      - /integritet privacy page (draft wording; board decisions pending)
+      - Logo in public/media + circular-cropped favicon-16/32 +
+        apple-touch-icon; color tokens sampled from logo
+      - SEO basics: lang=sv, title, description, canonical, OG/Twitter tags,
+        robots.txt, sitemap.xml
+
+      Refs: v0.1.0 I1D1 I1D2 I1D3 I1D4 I1D5 I1D6 I1D7 astro tailwind gpk

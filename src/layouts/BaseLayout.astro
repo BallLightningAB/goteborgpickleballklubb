@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import { site } from "../config/site";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = site.seo.title, description = site.seo.description } =
+	Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImage = site.logo.src
+	? new URL(site.logo.src, site.url).href
+	: undefined;
+---
+
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={site.name} />
+		<meta property="og:locale" content="sv_SE" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		{ogImage && <meta property="og:image" content={ogImage} />}
+		<meta name="twitter:card" content="summary" />
+	</head>
+	<body>
+		<a class="skip-link" href="#innehall">Hoppa till innehåll</a>
+		<slot />
+	</body>
+</html>

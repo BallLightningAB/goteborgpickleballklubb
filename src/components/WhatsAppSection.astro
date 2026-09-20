@@ -1,0 +1,28 @@
+---
+import { site } from "../config/site";
+import ButtonLink from "./ButtonLink.astro";
+---
+
+<section
+	id="whatsapp"
+	aria-labelledby="whatsapp-rubrik"
+	class="scroll-mt-20 bg-gpk-navy-deep text-white"
+>
+	<div class="mx-auto max-w-3xl px-4 py-16 md:py-24">
+		<h2 id="whatsapp-rubrik" class="mb-6 text-3xl text-white md:text-4xl">
+			{site.copy.whatsappHeading}
+		</h2>
+		<p class="mb-8 max-w-xl leading-relaxed text-white/90">
+			{site.copy.whatsappIntro}
+		</p>
+		{
+			site.whatsappInviteUrl ? (
+				<ButtonLink href={site.whatsappInviteUrl} external>
+					Gå med i vår WhatsApp
+				</ButtonLink>
+			) : (
+				<p class="leading-relaxed text-white/90">{site.copy.whatsappPending}</p>
+			)
+		}
+	</div>
+</section>

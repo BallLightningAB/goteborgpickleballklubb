@@ -1,0 +1,36 @@
+---
+interface Props {
+	href: string;
+	variant?: "primary" | "secondary";
+	external?: boolean;
+}
+
+const { href, variant = "primary", external = false } = Astro.props;
+
+const base =
+	"inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold tracking-tight transition-colors";
+
+const variants = {
+	primary:
+		"bg-gpk-gold text-gpk-navy-deep hover:bg-gpk-gold-bright",
+	secondary:
+		"border-2 border-gpk-navy text-gpk-navy-deep hover:bg-gpk-sky",
+};
+---
+
+<a
+	href={href}
+	class={`${base} ${variants[variant]}`}
+	target={external ? "_blank" : undefined}
+	rel={external ? "noopener noreferrer" : undefined}
+>
+	<slot />
+	{
+		external && (
+			<>
+				<span aria-hidden="true">↗</span>
+				<span class="sr-only">(öppnas i nytt fönster)</span>
+			</>
+		)
+	}
+</a>

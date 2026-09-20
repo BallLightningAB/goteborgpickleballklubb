@@ -1,0 +1,48 @@
+meta:
+  release: "0.1.0"
+  repo: "github.com/BallLightningAB/goteborgpickleballklubb"
+  pdd_version: "0.1.0"
+  references:
+    pdd: specs/memory-bank/goteborgpickleballklubb-pdd.yaml
+    changelog: specs/memory-bank/CHANGELOG.yaml
+  # Legend:
+  # - I{issue}D{n}: deliverable n for GitHub issue #{issue} (e.g. I1D3 = Issue #1 Deliverable 3)
+  # - I1Docs / I1UI / I1Fix / I1Test / I1Biome: tags for documentation, UI polish, minor fixes, tests and Biome/tooling work not tied to a single deliverable
+roadmap:
+  current:
+    - id: build-gpk-site-v1
+      issue: "#1"
+      title: "Bygg GPK v1 – statisk ensideswebbplats (Astro + Tailwind v4)"
+      status: in-progress
+      priority: high
+      links:
+        issue: "https://github.com/BallLightningAB/goteborgpickleballklubb/issues/1"
+      deliverables:
+        - "[I1D1] Scaffold Astro 7 + Tailwind v4 project in repo root with pinned stable dependencies"
+        - "[I1D2] Port Ball Lightning harness: memory-bank, .devin/rules (astro.md + ultracite.md), gitleaks, pre-commit, dependabot, secret-scan workflow, AGENTS.md"
+        - "[I1D3] Central site config (src/config/site.ts) with links, copy, dates and null-safe placeholders"
+        - "[I1D4] One-pager sections: presentation, intresseanmälan (Google Form iframe), WhatsApp, extra årsmöte, sidfot"
+        - "[I1D5] /integritet page with board-approved-track privacy wording"
+        - "[I1D6] Logo in public/media + favicon set + color tokens sampled from logo"
+        - "[I1D7] SEO basics: lang=sv, title, description, canonical, OG, robots.txt, sitemap.xml"
+        - "[I1D8] README + google-form-setup.md + integritetsinformation-forslag.md"
+      est:
+        dev_h: 8
+        test_h: 1
+      sub_issues: []
+      remaining_deliverables:
+        - "[I1D8] README + google-form-setup.md + integritetsinformation-forslag.md"
+      progress_log:
+        - covers: [I1D1] note: "Manual scaffold (create-astro rejected non-empty dir due to .devin/ session file): astro 7.3.2 pinned, tailwindcss/@tailwindcss/vite 4.3.3, @fontsource-variable/archivo 5.3.0, @astrojs/check 0.9.10, typescript 6.0.3 (TS 7 lacks programmatic API for astro check), @biomejs/biome 2.5.13, ultracite 7.11.1, @types/node 24.13.4. pnpm-workspace.yaml allows esbuild build script."
+        - covers: [I1D2] note: "Copied/adapted harness from shipping-api-dojo and thebuildercoil: rotate-changelog.sh, .pre-commit-config.yaml (gitleaks enabled), .gitleaks.toml, .nvmrc, secret-scan workflow (checkout@v7, gitleaks-action@v3), dependabot.yml, .vscode settings + extensions, biome.json adapted for .ts/.json/.css, new .devin/rules/astro.md."
+        - covers: [I1D3] note: "src/config/site.ts with typed config, real Google Form embed/URL, cleaned WhatsApp invite (tracking params stripped), meeting date, logo auto-resolution from public/media."
+        - covers: [I1D4] note: "Components Header/Hero/InterestForm/WhatsAppSection/MeetingSection/Footer/ButtonLink + index.astro; neutral Swedish placeholders render when config values are null."
+        - covers: [I1D5] note: "src/pages/integritet.astro with controller/purpose/consent/storage/retention/rights/cookies sections; board-pending items tracked in specs/current-changes/integritetsinformation-forslag.md."
+        - covers: [I1D6] note: "Founder-provided logo copied to public/media/gpk-logo.jpg; circular-cropped favicon-16/32 + apple-touch-icon generated via System.Drawing; palette sampled: navy #062953, navy-deep #012046, gold #cc982f."
+        - covers: [I1D7] note: "lang=sv, title/description/canonical/OG/Twitter meta in BaseLayout, robots.txt + sitemap.xml (2 URLs)."
+    next_steps:
+      - "Replace gpk-logo.jpg with master file (PNG/SVG) when available; update site.logo.src and regenerate favicons"
+      - "Board: confirm legal basis, retention period, and approval date for privacy notice"
+      - "Fix Google Form cosmetics (stray 'Alternativ 1' text, whitespace in titles, optional theme color)"
+      - "When ready to publish: import repo to Vercel, attach domain, update Namecheap DNS"
+    recent_done: []

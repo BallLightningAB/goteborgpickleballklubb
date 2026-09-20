@@ -1,0 +1,120 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+	title={site.seo.titleIntegritet}
+	description={site.seo.descriptionIntegritet}
+>
+	<Header />
+	<main id="innehall" class="mx-auto max-w-3xl px-4 py-16">
+		<h1 class="mb-8 text-3xl md:text-4xl">Integritetsinformation</h1>
+
+		<div class="space-y-8 leading-relaxed text-gpk-navy">
+			<p>
+				Den här sidan beskriver hur {site.name} (GPK) hanterar personuppgifter
+				i samband med intresseanmälan för medlemskap.
+			</p>
+
+			<section aria-labelledby="ansvarig">
+				<h2 id="ansvarig" class="mb-3 text-2xl">Personuppgiftsansvarig</h2>
+				<p>
+					{site.name} är personuppgiftsansvarig för behandlingen av de
+					uppgifter du lämnar i vår intresseanmälan. Du når oss på{" "}
+					<a
+						href={`mailto:${site.email}`}
+						class="font-medium underline underline-offset-4"
+					>
+						{site.email}
+					</a>
+					.
+				</p>
+			</section>
+
+			<section aria-labelledby="uppgifter">
+				<h2 id="uppgifter" class="mb-3 text-2xl">
+					Vilka uppgifter samlar vi in?
+				</h2>
+				<p>
+					Via intresseanmälan samlar vi in ditt namn, din e-postadress och –
+					om du vill – ditt svar på om du är intresserad av att hjälpa till i
+					föreningen. Vi samlar inte in personnummer, adress eller andra
+					uppgifter som inte behövs.
+				</p>
+			</section>
+
+			<section aria-labelledby="syfte">
+				<h2 id="syfte" class="mb-3 text-2xl">Syfte och rättslig grund</h2>
+				<p>
+					Uppgifterna används för att kontakta dig om medlemskap och klubbens
+					uppstart. Behandlingen sker med ditt samtycke, som du lämnar i
+					formuläret. Du kan när som helst återkalla ditt samtycke genom att
+					mejla oss på{" "}
+					<a
+						href={`mailto:${site.email}`}
+						class="font-medium underline underline-offset-4"
+					>
+						{site.email}
+					</a>
+					.
+				</p>
+			</section>
+
+			<section aria-labelledby="lagring">
+				<h2 id="lagring" class="mb-3 text-2xl">Var lagras uppgifterna?</h2>
+				<p>
+					Svaren lagras i Google Forms och ett Google-kalkylark i klubbens
+					Google-konto. Åtkomst är begränsad till klubbens styrelse. Vi delar
+					inte uppgifterna med tredje part.
+				</p>
+			</section>
+
+			<section aria-labelledby="gallring">
+				<h2 id="gallring" class="mb-3 text-2xl">Hur länge sparas uppgifterna?</h2>
+				<p>
+					Vi sparar uppgifterna så länge de behövs för syftet och raderar dem
+					när de inte längre behövs, eller tidigare om du begär det.
+				</p>
+			</section>
+
+			<section aria-labelledby="rattigheter">
+				<h2 id="rattigheter" class="mb-3 text-2xl">Dina rättigheter</h2>
+				<p>
+					Du har rätt att få tillgång till de uppgifter vi har om dig, att få
+					dem rättade eller raderade, att invända mot behandlingen och att
+					återkalla ditt samtycke. Kontakta oss på{" "}
+					<a
+						href={`mailto:${site.email}`}
+						class="font-medium underline underline-offset-4"
+					>
+						{site.email}
+					</a>
+					. Om du är missnöjd med hur vi hanterar dina uppgifter kan du vända
+					dig till Integritetsskyddsmyndigheten (IMY).
+				</p>
+			</section>
+
+			<section aria-labelledby="cookies">
+				<h2 id="cookies" class="mb-3 text-2xl">Cookies och spårning</h2>
+				<p>
+					Webbplatsen använder inga cookies och ingen analys- eller
+					marknadsföringsspårning. Det inbäddade intresseformuläret tillhandahålls
+					av Google och kan sätta Googles egna cookies när det laddas.
+				</p>
+			</section>
+		</div>
+
+		<p class="mt-12 text-sm">
+			<a
+				href="/"
+				class="font-medium text-gpk-navy underline underline-offset-4 hover:text-gpk-navy-deep"
+			>
+				← Tillbaka till startsidan
+			</a>
+		</p>
+	</main>
+	<Footer />
+</BaseLayout>

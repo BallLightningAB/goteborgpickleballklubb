@@ -1,0 +1,53 @@
+---
+import { site } from "../config/site";
+---
+
+<section id="intresse" aria-labelledby="intresse-rubrik" class="scroll-mt-20">
+	<div class="mx-auto max-w-3xl px-4 py-16 md:py-24">
+		<h2 id="intresse-rubrik" class="mb-6 text-3xl md:text-4xl">
+			{site.copy.interestHeading}
+		</h2>
+		<p class="mb-8 max-w-xl leading-relaxed text-gpk-navy">
+			{site.copy.interestIntro}
+		</p>
+		{
+			site.googleForm.embedUrl && site.googleForm.formUrl ? (
+				<>
+					<div class="overflow-hidden rounded-2xl border border-gpk-navy/15 bg-white shadow-sm">
+						<iframe
+							src={site.googleForm.embedUrl}
+							title="Intresseanmälan – Göteborg Pickleball Klubb"
+							width="100%"
+							height={site.googleForm.embedHeight}
+							loading="lazy"
+							class="block w-full"
+						>
+							Formuläret kunde inte visas här.
+						</iframe>
+					</div>
+					<p class="mt-4 text-sm">
+						<a
+							href={site.googleForm.formUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-medium text-gpk-navy underline underline-offset-4 hover:text-gpk-navy-deep"
+						>
+							Öppna formuläret i ett nytt fönster
+							<span aria-hidden="true"> ↗</span>
+						</a>
+					</p>
+				</>
+			) : (
+				<p class="max-w-xl leading-relaxed text-gpk-navy">
+					{site.copy.interestPending}{" "}
+					<a
+						href={`mailto:${site.email}`}
+						class="font-medium underline underline-offset-4"
+					>
+						{site.email}
+					</a>
+				</p>
+			)
+		}
+	</div>
+</section>

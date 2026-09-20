@@ -1,0 +1,49 @@
+---
+import { site } from "../config/site";
+
+const links = [
+	{ href: "/#intresse", label: "Intresseanmälan" },
+	{ href: "/#whatsapp", label: "WhatsApp" },
+	{ href: "/#arsmote", label: "Årsmöte" },
+];
+---
+
+<header class="border-gpk-navy/10 border-b">
+	<div
+		class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-4"
+	>
+		<a
+			href="/"
+			class="flex items-center gap-3 font-semibold text-gpk-navy-deep no-underline"
+		>
+			{
+				site.logo.src && (
+					<img
+						src={site.logo.src}
+						alt=""
+						width="40"
+						height="40"
+						class="h-10 w-10 rounded-full"
+					/>
+				)
+			}
+			<span class="text-lg tracking-tight">{site.shortName}</span>
+		</a>
+		<nav aria-label="Sidans sektioner">
+			<ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
+				{
+					links.map((link) => (
+						<li>
+							<a
+								href={link.href}
+								class="text-gpk-navy underline-offset-4 hover:text-gpk-navy-deep hover:underline"
+							>
+								{link.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>

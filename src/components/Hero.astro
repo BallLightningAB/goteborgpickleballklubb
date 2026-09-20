@@ -1,0 +1,38 @@
+---
+import { site } from "../config/site";
+import ButtonLink from "./ButtonLink.astro";
+---
+
+<section class="bg-gradient-to-b from-gpk-sky/70 to-white">
+	<div class="mx-auto max-w-3xl px-4 py-16 text-center md:py-24">
+		{
+			site.logo.src && (
+				<img
+					src={site.logo.src}
+					alt={site.logo.alt}
+					width="176"
+					height="176"
+					class="mx-auto mb-8 h-36 w-36 rounded-full shadow-lg shadow-gpk-navy/15 md:h-44 md:w-44"
+				/>
+			)
+		}
+		<h1 class="mb-6 text-4xl leading-tight md:text-5xl">
+			{site.name}
+		</h1>
+		<p
+			class="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-gpk-navy md:text-xl"
+		>
+			{site.copy.intro}
+		</p>
+		<div class="flex flex-wrap items-center justify-center gap-4">
+			<ButtonLink href="#intresse">Anmäl intresse för medlemskap</ButtonLink>
+			{
+				site.whatsappInviteUrl && (
+					<ButtonLink href={site.whatsappInviteUrl} variant="secondary" external>
+						Gå med i vår WhatsApp
+					</ButtonLink>
+				)
+			}
+		</div>
+	</div>
+</section>

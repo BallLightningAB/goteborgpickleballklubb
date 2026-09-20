@@ -1,0 +1,23 @@
+---
+import { site } from "../config/site";
+---
+
+<section id="arsmote" aria-labelledby="arsmote-rubrik" class="scroll-mt-20">
+	<div class="mx-auto max-w-3xl px-4 py-16 md:py-24">
+		<div
+			class="rounded-2xl border-2 border-gpk-gold bg-gpk-cream px-6 py-10 text-center md:px-10"
+		>
+			<h2 id="arsmote-rubrik" class="mb-4 text-3xl md:text-4xl">
+				{site.copy.meetingHeading}
+			</h2>
+			<p
+				class="mb-3 font-bold text-2xl text-gpk-navy-deep italic md:text-3xl"
+			>
+				<time datetime={site.extraMeeting.dateIso}>
+					{site.extraMeeting.label}
+				</time>
+			</p>
+			<p class="text-gpk-navy">{site.copy.meetingNote}</p>
+		</div>
+	</div>
+</section>

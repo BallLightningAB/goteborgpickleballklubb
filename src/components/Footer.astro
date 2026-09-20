@@ -1,0 +1,25 @@
+---
+import { site } from "../config/site";
+---
+
+<footer class="border-gpk-navy/10 border-t bg-gpk-sky/50">
+	<div
+		class="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-10 text-sm text-gpk-navy md:flex-row md:items-center md:justify-between"
+	>
+		<p class="font-semibold text-gpk-navy-deep">{site.name}</p>
+		<div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+			<a
+				href={`mailto:${site.email}`}
+				class="underline underline-offset-4 hover:text-gpk-navy-deep"
+			>
+				{site.email}
+			</a>
+			<a
+				href="/integritet"
+				class="underline underline-offset-4 hover:text-gpk-navy-deep"
+			>
+				Integritetsinformation
+			</a>
+		</div>
+	</div>
+</footer>
