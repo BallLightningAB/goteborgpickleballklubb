@@ -42,6 +42,7 @@ roadmap:
         - covers: [I1D8] note: "README with local start/build, config map, Google Forms coupling, Vercel+Namecheap deploy steps and pre-publish checklist; specs/current-changes/{google-form-setup,integritetsinformation-forslag,gpk-v1-hemsida-plan}.md."
         - covers: [I1D1, I1D4, I1D7] note: "Verified: pnpm build OK (2 static pages), astro check clean (14 files), biome check clean after migrate to preset:recommended, preview curl: lang=sv, meta/OG/canonical present, iframe=embed URL, WhatsApp link clean, no href='#', WCAG contrast all text combos >=6:1, focus ring navy-on-light / gold-on-navy."
         - covers: [I1D2] note: "Committed (89d2a5e, gitleaks+detect-private-key passed), pushed to existing repo BallLightningAB/goteborgpickleballklubb, 19 labels created, issue #1 created, secret-scan workflow green."
+        - covers: [I1Fix] note: "Post-deploy fixes 2026-09-20: tsconfig types:[node, astro/client] for deterministic astro check; added real favicon.ico (PNG-in-ICO) to fix browser default /favicon.ico 403 on Vercel. 'Unrecognized origin: self' console warning traced to Google Forms iframe internals - harmless, no action."
     next_steps:
       - "Replace gpk-logo.jpg with master file (PNG/SVG) when available; update site.logo.src and regenerate favicons"
       - "Board: confirm legal basis, retention period, and approval date for privacy notice"
