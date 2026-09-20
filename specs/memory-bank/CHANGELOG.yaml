@@ -2,7 +2,7 @@ entries:
   - date: "2026-09-20"
     version: 0.1.1
     issue: "#1"
-    commit: "pending"
+    commit: "5f7b10e"
     status: done
     title: "chore(release): go-live on Vercel + post-deploy fixes"
     details: |-
@@ -19,7 +19,7 @@ entries:
   - date: "2026-09-20"
     version: 0.1.0
     issue: "#1"
-    commit: "pending"
+    commit: "89d2a5e"
     status: done
     title: "feat(site): GPK v1 – statisk ensideswebbplats med Astro + Tailwind v4"
     details: |-
