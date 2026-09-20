@@ -2,7 +2,7 @@ pdd:
   meta:
     name: "Göteborg Pickleball Klubb – PDD"
     code_name: "goteborgpickleballklubb-pdd"
-    version: "0.1.0"
+    version: "0.1.1"
     repo: "https://github.com/BallLightningAB/goteborgpickleballklubb"
     purpose: >-
       Product Definition Document (PDD) for Göteborg Pickleball Klubb (GPK),
@@ -38,7 +38,7 @@ pdd:
       - Database, authentication, member portal, payments, backend
       - Analytics or marketing tracking
       - Protocol/minutes pages (minutes are shared in WhatsApp)
-      - Publishing to production or DNS changes (deferred)
+      - Analytics or member features beyond the embedded Google Form
 
   architecture:
     stack:
@@ -49,7 +49,7 @@ pdd:
       lint_format: "Biome 2.5 + Ultracite conventions"
       package_manager: "pnpm 10"
       node: "24.x"
-      hosting: "Vercel (planned, static – no adapter required)"
+      hosting: "Vercel (live since 2026-09-20, static – no adapter)"
       domain: "goteborgpickleballklubb.com (registered at Namecheap)"
     design:
       palette_source: "Sampled from club logo (public/media/gpk-logo.jpg)"

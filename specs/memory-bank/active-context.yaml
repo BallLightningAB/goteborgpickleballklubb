@@ -1,7 +1,7 @@
 meta:
-  release: "0.1.0"
+  release: "0.1.1"
   repo: "github.com/BallLightningAB/goteborgpickleballklubb"
-  pdd_version: "0.1.0"
+  pdd_version: "0.1.1"
   references:
     pdd: specs/memory-bank/goteborgpickleballklubb-pdd.yaml
     changelog: specs/memory-bank/CHANGELOG.yaml
@@ -9,14 +9,20 @@ meta:
   # - I{issue}D{n}: deliverable n for GitHub issue #{issue} (e.g. I1D3 = Issue #1 Deliverable 3)
   # - I1Docs / I1UI / I1Fix / I1Test / I1Biome: tags for documentation, UI polish, minor fixes, tests and Biome/tooling work not tied to a single deliverable
 roadmap:
-  current:
+  current: []
+  next_steps:
+    - "Issue #2 efterarbete: styrelsebeslut (rättslig grund, gallring, fastställandedatum) -> uppdatera /integritet"
+    - "Issue #2: ersätt public/media/gpk-logo.jpg med masterfil (PNG/SVG), regenerera favicons"
+    - "Issue #2: Google Form-kosmetik + bekräfta privat Sheets-koppling"
+    - "Issue #2: lägg till organisationsnummer i sidfoten när det finns"
+  recent_done:
     - id: build-gpk-site-v1
       issue: "#1"
       title: "Bygg GPK v1 – statisk ensideswebbplats (Astro + Tailwind v4)"
       status: done
-      priority: high
       links:
         issue: "https://github.com/BallLightningAB/goteborgpickleballklubb/issues/1"
+        pr: ""
       deliverables:
         - "[I1D1] Scaffold Astro 7 + Tailwind v4 project in repo root with pinned stable dependencies"
         - "[I1D2] Port Ball Lightning harness: memory-bank, .devin/rules (astro.md + ultracite.md), gitleaks, pre-commit, dependabot, secret-scan workflow, AGENTS.md"
@@ -43,9 +49,4 @@ roadmap:
         - covers: [I1D1, I1D4, I1D7] note: "Verified: pnpm build OK (2 static pages), astro check clean (14 files), biome check clean after migrate to preset:recommended, preview curl: lang=sv, meta/OG/canonical present, iframe=embed URL, WhatsApp link clean, no href='#', WCAG contrast all text combos >=6:1, focus ring navy-on-light / gold-on-navy."
         - covers: [I1D2] note: "Committed (89d2a5e, gitleaks+detect-private-key passed), pushed to existing repo BallLightningAB/goteborgpickleballklubb, 19 labels created, issue #1 created, secret-scan workflow green."
         - covers: [I1Fix] note: "Post-deploy fixes 2026-09-20: tsconfig types:[node, astro/client] for deterministic astro check; added real favicon.ico (PNG-in-ICO) to fix browser default /favicon.ico 403 on Vercel. 'Unrecognized origin: self' console warning traced to Google Forms iframe internals - harmless, no action."
-    next_steps:
-      - "Replace gpk-logo.jpg with master file (PNG/SVG) when available; update site.logo.src and regenerate favicons"
-      - "Board: confirm legal basis, retention period, and approval date for privacy notice"
-      - "Fix Google Form cosmetics (stray 'Alternativ 1' text, whitespace in titles, optional theme color)"
-      - "When ready to publish: import repo to Vercel, attach domain, update Namecheap DNS"
-    recent_done: []
+        - covers: [I1D1, I1D7] note: "Site live 2026-09-20: deployed to Vercel, apex domain goteborgpickleballklubb.com canonical, www redirects permanently. Release v0.1.1."

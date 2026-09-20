@@ -1,5 +1,22 @@
 entries:
   - date: "2026-09-20"
+    version: 0.1.1
+    issue: "#1"
+    commit: "pending"
+    status: done
+    title: "chore(release): go-live on Vercel + post-deploy fixes"
+    details: |-
+      - Deployed to Vercel; site live on https://goteborgpickleballklubb.com
+        (apex canonical, www redirects permanently)
+      - Added real favicon.ico (PNG-in-ICO) to stop browser default
+        /favicon.ico 403s
+      - tsconfig: explicit types [node, astro/client] for deterministic
+        astro check resolution
+      - README updated: deploy section marked done, remaining items are
+        board/ops follow-ups (issue #2)
+
+      Refs: v0.1.1 I1Fix I1D7 deploy vercel favicon tsconfig
+  - date: "2026-09-20"
     version: 0.1.0
     issue: "#1"
     commit: "pending"

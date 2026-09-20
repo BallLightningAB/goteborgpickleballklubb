@@ -54,20 +54,16 @@ Full dokumentation – befintliga frågor, obligatoriska inställningar, kända
 kosmetiska rättelser och hur länkarna byts – finns i
 [`specs/current-changes/google-form-setup.md`](specs/current-changes/google-form-setup.md).
 
-## Driftsättning på Vercel + domän (görs senare)
+## Driftsättning på Vercel + domän (klart – sajten är live)
 
-1. Importera repot i Vercel (`New Project` → välj
-   `BallLightningAB/goteborgpickleballklubb`). Vercel autodetekterar Astro –
-   ingen adapter eller extra konfiguration behövs.
-2. `Settings → Domains` → lägg till `goteborgpickleballklubb.com` och
-   `www.goteborgpickleballklubb.com`. Vercel visar då exakta DNS-värden.
-3. Hos Namecheap (`Advanced DNS`): A-post `@` → Vercels angivna IP
-   (historiskt `76.76.21.21`) och CNAME `www` → `cname.vercel-dns.com`.
-   Använd alltid värdena i Vercels UI – de styr.
+Sajten är deployad på Vercel och svarar på
+`https://goteborgpickleballklubb.com`. `www` redirectas permanent till apex
+(konfigurerat i Vercel). Vid ev. återställning av domänen: `Settings →
+Domains` → lägg till båda värdnamnen → hos Namecheap (`Advanced DNS`) A-post
+`@` → Vercels angivna IP och CNAME `www` → `cname.vercel-dns.com`. Använd
+alltid värdena i Vercels UI – de styr.
 
-**Publicera inte och ändra inte DNS förrän punkterna nedan är klara.**
-
-## Återstår före publicering
+## Återstår (efterarbete)
 
 - [ ] **Logotyp**: `public/media/gpk-logo.jpg` är en JPG-kopia av
       originalartworket. Ersätt med masterfilen (helst PNG/SVG med transparent
@@ -86,6 +82,7 @@ kosmetiska rättelser och hur länkarna byts – finns i
 - [ ] **Visuell kontroll** mobil/desktop i `pnpm dev`; justera
       `embedHeight` vid behov.
 - [ ] **Organisationsnummer**: lägg till i sidfoten när det finns.
+- [x] ~~**Vercel + domän + DNS**~~ – klart 2026-09-20 (apex permanent, www redirectar).
 
 ## Säkerhet
 
