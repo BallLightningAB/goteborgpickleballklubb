@@ -13,7 +13,7 @@ roadmap:
     - id: build-gpk-site-v1
       issue: "#1"
       title: "Bygg GPK v1 – statisk ensideswebbplats (Astro + Tailwind v4)"
-      status: in-progress
+      status: done
       priority: high
       links:
         issue: "https://github.com/BallLightningAB/goteborgpickleballklubb/issues/1"
@@ -30,8 +30,7 @@ roadmap:
         dev_h: 8
         test_h: 1
       sub_issues: []
-      remaining_deliverables:
-        - "[I1D8] README + google-form-setup.md + integritetsinformation-forslag.md"
+      remaining_deliverables: []
       progress_log:
         - covers: [I1D1] note: "Manual scaffold (create-astro rejected non-empty dir due to .devin/ session file): astro 7.3.2 pinned, tailwindcss/@tailwindcss/vite 4.3.3, @fontsource-variable/archivo 5.3.0, @astrojs/check 0.9.10, typescript 6.0.3 (TS 7 lacks programmatic API for astro check), @biomejs/biome 2.5.13, ultracite 7.11.1, @types/node 24.13.4. pnpm-workspace.yaml allows esbuild build script."
         - covers: [I1D2] note: "Copied/adapted harness from shipping-api-dojo and thebuildercoil: rotate-changelog.sh, .pre-commit-config.yaml (gitleaks enabled), .gitleaks.toml, .nvmrc, secret-scan workflow (checkout@v7, gitleaks-action@v3), dependabot.yml, .vscode settings + extensions, biome.json adapted for .ts/.json/.css, new .devin/rules/astro.md."
@@ -40,6 +39,9 @@ roadmap:
         - covers: [I1D5] note: "src/pages/integritet.astro with controller/purpose/consent/storage/retention/rights/cookies sections; board-pending items tracked in specs/current-changes/integritetsinformation-forslag.md."
         - covers: [I1D6] note: "Founder-provided logo copied to public/media/gpk-logo.jpg; circular-cropped favicon-16/32 + apple-touch-icon generated via System.Drawing; palette sampled: navy #062953, navy-deep #012046, gold #cc982f."
         - covers: [I1D7] note: "lang=sv, title/description/canonical/OG/Twitter meta in BaseLayout, robots.txt + sitemap.xml (2 URLs)."
+        - covers: [I1D8] note: "README with local start/build, config map, Google Forms coupling, Vercel+Namecheap deploy steps and pre-publish checklist; specs/current-changes/{google-form-setup,integritetsinformation-forslag,gpk-v1-hemsida-plan}.md."
+        - covers: [I1D1, I1D4, I1D7] note: "Verified: pnpm build OK (2 static pages), astro check clean (14 files), biome check clean after migrate to preset:recommended, preview curl: lang=sv, meta/OG/canonical present, iframe=embed URL, WhatsApp link clean, no href='#', WCAG contrast all text combos >=6:1, focus ring navy-on-light / gold-on-navy."
+        - covers: [I1D2] note: "Committed (89d2a5e, gitleaks+detect-private-key passed), pushed to existing repo BallLightningAB/goteborgpickleballklubb, 19 labels created, issue #1 created, secret-scan workflow green."
     next_steps:
       - "Replace gpk-logo.jpg with master file (PNG/SVG) when available; update site.logo.src and regenerate favicons"
       - "Board: confirm legal basis, retention period, and approval date for privacy notice"
