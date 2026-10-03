@@ -9,7 +9,23 @@ meta:
   # - I{issue}D{n}: deliverable n for GitHub issue #{issue} (e.g. I1D3 = Issue #1 Deliverable 3)
   # - I1Docs / I1UI / I1Fix / I1Test / I1Biome: tags for documentation, UI polish, minor fixes, tests and Biome/tooling work not tied to a single deliverable
 roadmap:
-  current: []
+  current:
+    - id: publish-arsmote-kallelse
+      issue: "#3"
+      title: "Publicera kallelsen till extra årsmötet 2026-10-24 på hemsidan"
+      status: ready
+      priority: high
+      links:
+        issue: "https://github.com/BallLightningAB/goteborgpickleballklubb/issues/3"
+      deliverables:
+        - "[I3D1] Uppdatera årsmötesektionen med tid och plats; mötesfakta i site.extraMeeting"
+        - "[I3D2] Återge hela kallelsen ordagrant (syfte, dagordning, fotnot, dokument, hälsning)"
+        - "[I3D3] Dagordning som <ol> med nästlade funktionärsval; fotnot läsbar (>= 4.5:1)"
+        - "[I3D4] Verifiering: build, astro check, biome, tangentbord inkl. <details>, mobil/desktop"
+      source_doc: "specs/current-changes/kallelse-extra-arsmote-2026-10-24.md"
+      remaining_deliverables: []
+      progress_log:
+        - covers: [I3Docs] note: "2026-10-03: Kallelsens källtext sparad ordagrant i specs/current-changes/kallelse-extra-arsmote-2026-10-24.md och issue #3 skapad med deliverables I3D1-I3D4."
   next_steps:
     - "Issue #2 efterarbete: styrelsebeslut (rättslig grund, gallring, fastställandedatum) -> uppdatera /integritet"
     - "Issue #2: ersätt public/media/gpk-logo.jpg med masterfil (PNG/SVG), regenerera favicons"
