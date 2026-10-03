@@ -32,15 +32,17 @@ det extra årsmötet 24 oktober 2026.
 
 ## Kända kosmetiska rättelser att göra i Google Forms
 
-Görs i klubbens Google-konto (agenter kan inte redigera formuläret):
+Görs i klubbens Google-konto (agenter kan inte redigera formuläret).
+**Status 2026-10-03:** punkt 1–2 åtgärdade och verifierade mot live-formuläret.
 
-1. **Första svarsalternativet** i fråga 2 lyder "Alternativ 1Ja, kontakta mig
-   gärna." → ta bort texten "Alternativ 1".
-2. **Frågetitlar** har extra mellanslag: "För- och efternamn " och
-   "  Vill du hjälpa till i föreningen?  " → trimma.
-3. **Temafärg** är orange (#FF9800) och krockar med sidans marinblå/guld.
+1. ~~**Första svarsalternativet** i fråga 2 lyder "Alternativ 1Ja, kontakta mig
+   gärna."~~ – åtgärdat.
+2. ~~**Frågetitlar** har extra mellanslag: "För- och efternamn " och
+   "  Vill du hjälpa till i föreningen?  "~~ – åtgärdat.
+3. **Temafärg** var orange (#FF9800) och krockar med sidans marinblå/guld.
    Valfritt: sätt temafärg till marinblå (#062953) eller guld (#cc982f) så
-   iframen smälter in bättre.
+   iframen smälter in bättre. *(Ej verifierat om bytt – syns visuellt i
+   den inbäddade iframen.)*
 
 ## Byta formulär eller hämta länkar på nytt
 

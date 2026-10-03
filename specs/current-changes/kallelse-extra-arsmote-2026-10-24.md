@@ -1,5 +1,7 @@
 # Kallelse – Extra årsmöte 2026-10-24 (källtext)
 
+**Status: implementerad 2026-10-03 i v0.1.3** (issue #3, `MeetingSection.astro`).
+
 Kallelsen publicerades av interimstyrelsen i WhatsApp Announcement-kanalen
 2026-10-02. Texten nedan är den officiella kallelsen ordagrant – den ska återges
 oförändrad på webbplatsen. Ändringar i innehållet görs endast på beslut av
@@ -72,9 +74,13 @@ och ge sin röst! Vad gäller strån och förslag eftersöks särskilt **kassör
 
 ## Implementationsanteckningar (ej del av kallelsen)
 
-- Sekcionen `#arsmote` på startsidan visar datum/tid/plats + sammanfattning;
-  fullständig kallelse i expanderbart `<details>`-element (noll JS) eller på
-  startsidan direkt – välj det som håller sidan luftig.
-- Mötesfakta (datum, tid, plats) bryts ut till `src/config/site.ts`.
-- "publiceras här" i kallelsen syftar på den här sidan/sektionen – behåll
-  formuleringen ordagrant.
+- Sekcionen `#arsmote` visar faktakort + inledning/syften synligt; dagordning,
+  fotnot, dokumentnotis och hälsning ligger i ett expanderbart
+  `<details>`-element (noll JS). Efterlysningen kassör/revisor är en synlig
+  callout under blocket.
+- Mötesfakta (datum, tid, plats, annonseringslist) ligger i
+  `src/config/site.ts` under `site.extraMeeting`.
+- "publiceras här" i kallelsen syftar på den här sidan/sektionen – formuleringen
+  är ordagrant bevarad.
+- Annonseringslisten under headern (MeetingBanner.astro) släcks genom att
+  `site.extraMeeting.banner` sätts till `null`.

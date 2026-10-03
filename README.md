@@ -34,7 +34,8 @@ Allt lättändrat innehåll ligger i **`src/config/site.ts`**:
 | WhatsApp-inbjudan | `site.whatsappInviteUrl` |
 | Google Form embed + länk | `site.googleForm.embedUrl` / `site.googleForm.formUrl` |
 | Iframens höjd | `site.googleForm.embedHeight` |
-| Mötesdatum | `site.extraMeeting` |
+| Mötesfakta + annonseringslist (null = döljs) | `site.extraMeeting` |
+| Fastställandedatum integritet (null = döljs) | `site.privacy.establishedDate` |
 | Sidtexter | `site.copy.*` |
 | Logotyp | `site.logo.src` (auto-upptäcker bilder i `public/media/`) |
 
@@ -65,24 +66,23 @@ alltid värdena i Vercels UI – de styr.
 
 ## Återstår (efterarbete)
 
-- [ ] **Logotyp**: `public/media/gpk-logo.jpg` är en JPG-kopia av
-      originalartworket. Ersätt med masterfilen (helst PNG/SVG med transparent
-      bakgrund) och uppdatera `site.logo.src` + generera om favicons
-      (se `specs/current-changes/` eller fråga agenten).
-- [ ] **Styrelsebeslut** om rättslig grund, gallringstid och fastställandedatum
-      för integritetsinformationen – se
-      `specs/current-changes/integritetsinformation-forslag.md` och uppdatera
-      `src/pages/integritet.astro`.
-- [ ] **Google Form-kosmetik**: "Alternativ 1"-prefixet i svarsalternativ,
-      mellanslag i frågetitlar, valfri temafärg – se `google-form-setup.md`.
-- [ ] **Sheets-koppling**: bekräfta att svaren länkas till ett privat
-      kalkylark i klubbens Google-konto.
-- [ ] **Manuell test i inkognito**: formuläret ska gå att besvara utan
-      Google-inloggning; WhatsApp-knappen ska öppna "GPK medlemschat".
-- [ ] **Visuell kontroll** mobil/desktop i `pnpm dev`; justera
-      `embedHeight` vid behov.
-- [ ] **Organisationsnummer**: lägg till i sidfoten när det finns.
+- [ ] **Organisationsnummer**: lägg till i sidfoten när det finns (issue #2, I2D6).
+- [ ] **Möteshandlingar**: kallelsen lovar stadgar, verksamhetsberättelse och
+      budget på sidan senast en vecka före mötet (2026-10-17).
+- [ ] **Efter årsmötet (2026-10-24)**: sätt `site.extraMeeting.banner` till
+      `null` så släcks annonseringslisten; årsmötesektionen kan då byggas om
+      till ordinarie årsmötesinfo.
+- [ ] **Logotyp (valfri förbättring)**: `public/media/gpk-logo.png` är en
+      genomskinlig PNG-mästare genererad från grundartworket. Ersätt med en
+      vektormaster (SVG) om en sådan produceras – uppdatera `site.logo.src`.
+- [ ] **Visuell finjustering**: kontrollera `embedHeight` i webbläsaren om
+      formuläret får dubbel scroll eller tom yta.
 - [x] ~~**Vercel + domän + DNS**~~ – klart 2026-09-20 (apex permanent, www redirectar).
+- [x] ~~**Logotyp-mästare**~~ – klart 2026-10-03 (gpk-logo.png, transparent utanför rundeln).
+- [x] ~~**Styrelsebeslut integritet**~~ – klart 2026-10-03 (samtycke, gallring, fastställd 2026-09-21).
+- [x] ~~**Google Form-kosmetik**~~ – klart 2026-10-03 (prefix + mellanslag åtgärdade).
+- [x] ~~**Sheets-koppling**~~ – klart 2026-10-03 (privat kalkylark bekräftat).
+- [x] ~~**Inkognitotest**~~ – klart 2026-10-03 (formulär + WhatsApp fungerar).
 
 ## Säkerhet
 
