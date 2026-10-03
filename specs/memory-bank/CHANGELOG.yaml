@@ -2,7 +2,7 @@ entries:
   - date: "2026-10-03"
     version: 0.1.3
     issue: "#3"
-    commit: "pending"
+    commit: "0600ad2"
     status: done
     title: "feat(meeting): publicerad kallelse till extra årsmötet 2026-10-24"
     details: |-
