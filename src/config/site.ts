@@ -29,8 +29,8 @@ export interface SiteConfig {
 		time: string;
 		place: string;
 		address: string;
-		/** Kort etikett för den diskreta CTA-pillen i headern. */
-		badge: string;
+		/** Annonseringslist under headern. null = döljs (t.ex. efter mötet). */
+		banner: string | null;
 	};
 	logo: {
 		src: string | null;
@@ -106,7 +106,7 @@ export const site: SiteConfig = {
 		time: "kl. 16.00",
 		place: "Hisingens Cykelklubbs föreningslokal",
 		address: "Arvid Lindmansgatan 25 F",
-		badge: "Årsmöte 24 okt",
+		banner: "Extra årsmöte 24 oktober kl. 16.00",
 	},
 
 	logo: {
@@ -115,7 +115,7 @@ export const site: SiteConfig = {
 	},
 
 	privacy: {
-		establishedDate: null,
+		establishedDate: "2026-09-21",
 	},
 
 	seo: {

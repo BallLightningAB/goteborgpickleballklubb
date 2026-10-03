@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import MeetingBanner from "../components/MeetingBanner.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../config/site";
 ---
@@ -10,6 +11,7 @@ import { site } from "../config/site";
 	description={site.seo.descriptionIntegritet}
 >
 	<Header />
+	<MeetingBanner />
 	<main id="innehall" class="mx-auto max-w-3xl px-4 py-16">
 		<h1 class="mb-8 text-3xl md:text-4xl">Integritetsinformation</h1>
 

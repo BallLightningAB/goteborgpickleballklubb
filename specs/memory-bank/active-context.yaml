@@ -1,5 +1,5 @@
 meta:
-  release: "0.1.3"
+  release: "0.1.4"
   repo: "github.com/BallLightningAB/goteborgpickleballklubb"
   pdd_version: "0.1.1"
   references:
@@ -29,8 +29,8 @@ roadmap:
         - covers: [I2D1, I2D4, I2D5] note: "2026-10-03: Bekräftade av användaren - styrelsebeslut om integritetstext (sida uppdaterad med fastställd gallringstext; fastställandedatum väntar via site.privacy.establishedDate), privat Sheets-koppling OK, inkognitotest OK."
         - covers: [I2D2] note: "2026-10-03: Genererad gpk-logo.png (1024x1024, transparent utanför rundeln via elliptisk alfamask, System.Drawing) ersatte jpg; favicons + og:image följer automatiskt."
         - covers: [I2D3] note: "2026-10-03: Stängd - 'Alternativ 1'-prefix borta, mellanslag i frågetitlar korrigerade i klubbens Google-konto (verifierat av användaren)."
+        - covers: [I2D1] note: "2026-10-03: Fastställandedatum bekräftat till 2026-09-21 (dagen efter go-live); site.privacy.establishedDate satt och 'Fastställd av styrelsen'-raden renderas på /integritet."
   next_steps:
-    - "Issue #2: sätt site.privacy.establishedDate när fastställandedatumet är bekräftat"
     - "Issue #2: lägg till organisationsnummer i sidfoten när det finns (I2D6)"
     - "Publicera möteshandlingar (stadgar, verksamhetsberättelse, budget) senast 2026-10-17 enligt kallelsen"
   recent_done:

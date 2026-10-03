@@ -1,0 +1,21 @@
+---
+import { site } from "../config/site";
+---
+
+{
+	site.extraMeeting.banner && (
+		<a
+			href="/#arsmote"
+			class="block bg-gpk-navy-deep px-4 py-2.5 text-center font-medium text-sm text-white no-underline"
+		>
+			<span
+				aria-hidden="true"
+				class="gpk-pulse-dot mr-2 inline-block h-1.5 w-1.5 rounded-full bg-gpk-gold align-middle"
+			/>
+			{site.extraMeeting.banner}
+			<span class="ml-2 font-semibold text-gpk-gold underline underline-offset-4">
+				Läs kallelsen →
+			</span>
+		</a>
+	)
+}

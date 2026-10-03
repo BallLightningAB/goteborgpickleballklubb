@@ -89,6 +89,29 @@ details.gpk-details[open] .gpk-details-chevron {
 	}
 }
 
+/* Diskret uppmärksamhetspuls på annonseringslistens guldpunkt */
+@keyframes gpk-pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.45;
+		transform: scale(1.6);
+	}
+}
+
+.gpk-pulse-dot {
+	animation: gpk-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gpk-pulse-dot {
+		animation: none;
+	}
+}
+
 /* Skip-link: osynlig tills den får fokus */
 .skip-link {
 	position: absolute;

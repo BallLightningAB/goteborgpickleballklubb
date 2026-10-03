@@ -4,6 +4,7 @@ import { site } from "../config/site";
 const links = [
 	{ href: "/#intresse", label: "Intresseanmälan" },
 	{ href: "/#whatsapp", label: "WhatsApp" },
+	{ href: "/#arsmote", label: "Årsmöte" },
 ];
 ---
 
@@ -42,15 +43,6 @@ const links = [
 						</li>
 					))
 				}
-				<li>
-					<a
-						href="/#arsmote"
-						class="inline-flex items-center gap-1.5 rounded-full border border-gpk-gold/60 bg-gpk-cream px-3 py-1 font-semibold text-gpk-navy text-xs hover:border-gpk-gold"
-					>
-						<span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-gpk-gold" />
-						{site.extraMeeting.badge}
-					</a>
-				</li>
 			</ul>
 		</nav>
 	</div>
