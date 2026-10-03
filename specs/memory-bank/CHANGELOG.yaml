@@ -2,7 +2,7 @@ entries:
   - date: "2026-10-03"
     version: 0.1.4
     issue: "#2/#3"
-    commit: "pending"
+    commit: "340758d"
     status: done
     title: "feat(meeting): announcement-bar CTA + fastställandedatum på /integritet"
     details: |-
