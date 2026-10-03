@@ -2,7 +2,7 @@ entries:
   - date: "2026-10-03"
     version: 0.1.2
     issue: "#2"
-    commit: "pending"
+    commit: "3652cff"
     status: done
     title: "feat(assets): transparent logo PNG master + confirmed retention wording"
     details: |-
