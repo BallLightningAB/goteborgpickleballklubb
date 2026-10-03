@@ -37,10 +37,10 @@ Google Forms-iframen kan sätta Googles egna cookies.
 
 | # | Beslut | Förslag | Status |
 |---|--------|---------|--------|
-| 1 | Rättslig grund | Samtycke (används redan i formulärets samtyckestext; alternativ: berättigat intresse) | ⬜ Öppet |
-| 2 | Gallringstid | T.ex. "raderas när personen blivit medlem, tackat nej, eller senast 24 månader efter anmälan" | ⬜ Öppet |
-| 3 | Fastställandedatum | Datum då styrelsen fastställer informationen (läggs sist på sidan: "Fastställd YYYY-MM-DD") | ⬜ Öppet |
-| 4 | Registrering i Google-kalkylark | Bekräfta att "Länka till Sheets" är gjord och att arket är privat | ⬜ Öppet |
+| 1 | Rättslig grund | Samtycke (används redan i formulärets samtyckestext; alternativ: berättigat intresse) | ✅ Beslutat 2026-10 |
+| 2 | Gallringstid | "Raderas när personen blivit medlem, tackat nej, eller senast 24 månader efter anmälan" | ✅ Beslutat 2026-10 – infört på sidan |
+| 3 | Fastställandedatum | Datum då styrelsen fastställer informationen (läggs sist på sidan: "Fastställd YYYY-MM-DD") | ⬜ Väntar datum – sätts i `site.privacy.establishedDate` |
+| 4 | Registrering i Google-kalkylark | Bekräfta att "Länka till Sheets" är gjord och att arket är privat | ✅ Bekräftat 2026-10 |
 
 ## Arbetsflöde vid beslut
 

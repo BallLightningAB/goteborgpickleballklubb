@@ -2,7 +2,7 @@ pdd:
   meta:
     name: "Göteborg Pickleball Klubb – PDD"
     code_name: "goteborgpickleballklubb-pdd"
-    version: "0.1.1"
+    version: "0.1.2"
     repo: "https://github.com/BallLightningAB/goteborgpickleballklubb"
     purpose: >-
       Product Definition Document (PDD) for Göteborg Pickleball Klubb (GPK),
@@ -52,7 +52,7 @@ pdd:
       hosting: "Vercel (live since 2026-09-20, static – no adapter)"
       domain: "goteborgpickleballklubb.com (registered at Namecheap)"
     design:
-      palette_source: "Sampled from club logo (public/media/gpk-logo.jpg)"
+      palette_source: "Sampled from club logo (public/media/gpk-logo.png)"
       tokens:
         gpk-navy: "#062953"
         gpk-navy-deep: "#012046"
@@ -62,9 +62,10 @@ pdd:
         gpk-sky: "#eef2f7"
       notes: >-
         Gold is never used as text on white (contrast < 4.5:1). Buttons with
-        gold background always use navy-deep text. Logo file is currently a
-        1024x1024 JPG derived from the founder-provided artwork; replace with
-        a master PNG/SVG when available and update site.logo.src.
+        gold background always use navy-deep text. Logo is a 1024x1024 PNG
+        with transparent background outside the roundel (elliptical alpha
+        mask derived 2026-10-03 from the founder-provided JPG, which is
+        retired). Replace with a vector master (SVG) if one is produced.
     external_services:
       google_form:
         purpose: "Membership interest collection"
@@ -83,6 +84,10 @@ pdd:
   privacy:
     controller: "Göteborg Pickleball Klubb"
     contact: "goteborgpickleballklubb@gmail.com"
-    legal_basis_draft: "Samtycke (consent) – pending formal board confirmation"
-    retention_draft: "Pending board decision; page uses neutral wording meanwhile"
+    legal_basis: "Samtycke (consent) – board-confirmed 2026-10"
+    retention: >-
+      Confirmed 2026-10: data deleted when the person becomes a member,
+      declines membership, or at latest 24 months after submission.
+      "Fastställd"-date on /integritet pending board confirmation
+      (site.privacy.establishedDate).
     source_draft: "specs/current-changes/integritetsinformation-forslag.md"

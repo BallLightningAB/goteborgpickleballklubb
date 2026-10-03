@@ -1,4 +1,25 @@
 entries:
+  - date: "2026-10-03"
+    version: 0.1.2
+    issue: "#2"
+    commit: "pending"
+    status: done
+    title: "feat(assets): transparent logo PNG master + confirmed retention wording"
+    details: |-
+      - public/media/gpk-logo.png replaces .jpg: 1024x1024 with transparent
+        background outside the roundel (elliptical alpha mask, System.Drawing);
+        favicon-16/32, apple-touch-icon and favicon.ico regenerated from it
+      - site.ts prefers gpk-logo.png; og:image follows logo.src automatically
+      - /integritet: retention section updated to board-confirmed wording
+        (deleted on membership/decline/latest 24 months); new
+        site.privacy.establishedDate renders a "Fastställd"-line once the
+        board confirms the date
+      - Board-confirmed: legal basis samtycke, retention rule, private
+        Google Sheet link (I2D1/I2D4); incognito form + WhatsApp test OK
+        (I2D5); form "Alternativ 1"-prefix removed by club (I2D3 partial -
+        trailing whitespace remains in some question titles)
+
+      Refs: v0.1.2 I2D1 I2D2 I2D3 I2D4 I2D5 logo privacy favicon
   - date: "2026-09-20"
     version: 0.1.1
     issue: "#1"

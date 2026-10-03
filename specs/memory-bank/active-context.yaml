@@ -1,5 +1,5 @@
 meta:
-  release: "0.1.1"
+  release: "0.1.2"
   repo: "github.com/BallLightningAB/goteborgpickleballklubb"
   pdd_version: "0.1.1"
   references:
@@ -26,11 +26,30 @@ roadmap:
       remaining_deliverables: []
       progress_log:
         - covers: [I3Docs] note: "2026-10-03: Kallelsens källtext sparad ordagrant i specs/current-changes/kallelse-extra-arsmote-2026-10-24.md och issue #3 skapad med deliverables I3D1-I3D4."
+    - id: post-golive-efferarbete
+      issue: "#2"
+      title: "Efterarbete efter go-live v0.1.1"
+      status: in_progress
+      priority: medium
+      links:
+        issue: "https://github.com/BallLightningAB/goteborgpickleballklubb/issues/2"
+      deliverables:
+        - "[I2D1] Styrelsebeslut integritet (grund/gallring/datum) -> integritet.astro"
+        - "[I2D2] Masterlogotyp PNG/SVG med transparent bakgrund"
+        - "[I2D3] Google Form-kosmetik (Alternativ 1, mellanslag, temafärg)"
+        - "[I2D4] Bekräfta privat Sheets-koppling"
+        - "[I2D5] Inkognitotest formulär + WhatsApp"
+        - "[I2D6] Organisationsnummer i sidfoten (väntar på org.nr)"
+      remaining_deliverables: [I2D3, I2D6]
+      progress_log:
+        - covers: [I2D1, I2D4, I2D5] note: "2026-10-03: Bekräftade av användaren - styrelsebeslut om integritetstext (sida uppdaterad med fastställd gallringstext; fastställandedatum väntar via site.privacy.establishedDate), privat Sheets-koppling OK, inkognitotest OK."
+        - covers: [I2D2] note: "2026-10-03: Genererad gpk-logo.png (1024x1024, transparent utanför rundeln via elliptisk alfamask, System.Drawing) ersatte jpg; favicons + og:image följer automatiskt."
+        - covers: [I2D3] note: "2026-10-03: Verifierat mot live-formuläret - 'Alternativ 1'-prefixet borttaget men avslutande mellanslag kvarstår i minst två frågetitlar (t.ex. 'För- och efternamn '). Temafärg ej verifierbar ur HTML."
   next_steps:
-    - "Issue #2 efterarbete: styrelsebeslut (rättslig grund, gallring, fastställandedatum) -> uppdatera /integritet"
-    - "Issue #2: ersätt public/media/gpk-logo.jpg med masterfil (PNG/SVG), regenerera favicons"
-    - "Issue #2: Google Form-kosmetik + bekräfta privat Sheets-koppling"
-    - "Issue #2: lägg till organisationsnummer i sidfoten när det finns"
+    - "Issue #3: implementera kallelsen i årsmötesektionen (I3D1-I3D4)"
+    - "Issue #2: sätt site.privacy.establishedDate när fastställandedatumet är bekräftat"
+    - "Issue #2: kvarvarande formkosmetik - mellanslag i frågetitlar, ev. temafärg (I2D3)"
+    - "Issue #2: lägg till organisationsnummer i sidfoten när det finns (I2D6)"
   recent_done:
     - id: build-gpk-site-v1
       issue: "#1"

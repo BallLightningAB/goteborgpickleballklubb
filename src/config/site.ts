@@ -31,6 +31,10 @@ export interface SiteConfig {
 		src: string | null;
 		alt: string;
 	};
+	privacy: {
+		/** ISO-datum då styrelsen fastställde integritetsinformationen. null = visa inget. */
+		establishedDate: string | null;
+	};
 	seo: {
 		title: string;
 		titleIntegritet: string;
@@ -52,7 +56,7 @@ export interface SiteConfig {
 
 // public/media relativt projektroten (process.cwd() under astro dev/build)
 const mediaDir = join(process.cwd(), "public", "media");
-const preferredLogo = "gpk-logo.jpg";
+const preferredLogo = "gpk-logo.png";
 
 /**
  * Löser upp logotypen: föredrar gpk-logo.* i public/media, annars första
@@ -99,6 +103,10 @@ export const site: SiteConfig = {
 	logo: {
 		src: resolveLogoSrc(),
 		alt: "Göteborg Pickleball Klubb – logotyp",
+	},
+
+	privacy: {
+		establishedDate: null,
 	},
 
 	seo: {

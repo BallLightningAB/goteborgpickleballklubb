@@ -75,8 +75,9 @@ import { site } from "../config/site";
 			<section aria-labelledby="gallring">
 				<h2 id="gallring" class="mb-3 text-2xl">Hur länge sparas uppgifterna?</h2>
 				<p>
-					Vi sparar uppgifterna så länge de behövs för syftet och raderar dem
-					när de inte längre behövs, eller tidigare om du begär det.
+					Vi raderar dina uppgifter när du har blivit medlem, tackat nej till
+					medlemskap eller senast 24 månader efter din anmälan – och alltid
+					tidigare om du begär det.
 				</p>
 			</section>
 
@@ -106,6 +107,18 @@ import { site } from "../config/site";
 				</p>
 			</section>
 		</div>
+
+		{
+			site.privacy.establishedDate && (
+				<p class="mt-12 text-sm">
+					Fastställd av styrelsen{" "}
+					<time datetime={site.privacy.establishedDate}>
+						{site.privacy.establishedDate}
+					</time>
+					.
+				</p>
+			)
+		}
 
 		<p class="mt-12 text-sm">
 			<a
