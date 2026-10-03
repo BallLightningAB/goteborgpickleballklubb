@@ -2,7 +2,7 @@ pdd:
   meta:
     name: "Göteborg Pickleball Klubb – PDD"
     code_name: "goteborgpickleballklubb-pdd"
-    version: "0.1.2"
+    version: "0.1.3"
     repo: "https://github.com/BallLightningAB/goteborgpickleballklubb"
     purpose: >-
       Product Definition Document (PDD) for Göteborg Pickleball Klubb (GPK),
@@ -28,7 +28,8 @@ pdd:
       website:
         - Fully static Astro build (no client-side JS in v1)
         - One-pager sections: presentation, interest form (Google Forms
-          iframe), WhatsApp invite, extra annual meeting notice, footer
+          iframe), WhatsApp invite, extra annual meeting section with the
+          verbatim board kallelse (facts + agenda in <details>), footer
         - Dedicated /integritet privacy information page
         - Swedish language throughout (lang="sv")
         - Central content/link config in src/config/site.ts

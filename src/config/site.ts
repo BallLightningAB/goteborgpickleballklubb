@@ -26,6 +26,11 @@ export interface SiteConfig {
 	extraMeeting: {
 		dateIso: string;
 		label: string;
+		time: string;
+		place: string;
+		address: string;
+		/** Kort etikett för den diskreta CTA-pillen i headern. */
+		badge: string;
 	};
 	logo: {
 		src: string | null;
@@ -50,7 +55,7 @@ export interface SiteConfig {
 		whatsappIntro: string;
 		whatsappPending: string;
 		meetingHeading: string;
-		meetingNote: string;
+		meetingLead: string;
 	};
 }
 
@@ -98,6 +103,10 @@ export const site: SiteConfig = {
 	extraMeeting: {
 		dateIso: "2026-10-24",
 		label: "24 oktober 2026",
+		time: "kl. 16.00",
+		place: "Hisingens Cykelklubbs föreningslokal",
+		address: "Arvid Lindmansgatan 25 F",
+		badge: "Årsmöte 24 okt",
 	},
 
 	logo: {
@@ -131,6 +140,7 @@ export const site: SiteConfig = {
 			"Information och uppdateringar delas i klubbens medlemschat på WhatsApp. Gå gärna med så håller vi dig uppdaterad om medlemskap och klubbens fortsatta utveckling.",
 		whatsappPending: "Länk till klubbens WhatsApp publiceras snart.",
 		meetingHeading: "Extra årsmöte den 24 oktober 2026",
-		meetingNote: "Mer information om tid, plats och kallelse kommer.",
+		meetingLead:
+			"Kallelsen är publicerad. Nedan hittar du dagordning, rösträttsregler och information om handlingarna inför mötet.",
 	},
 } as const;

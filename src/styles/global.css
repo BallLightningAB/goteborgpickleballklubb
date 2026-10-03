@@ -65,6 +65,30 @@ h1 {
 	outline-color: var(--color-gpk-gold);
 }
 
+/* Kallelse-details: egen markör, roterande pil, noll JS */
+details.gpk-details > summary {
+	list-style: none;
+}
+
+details.gpk-details > summary::-webkit-details-marker {
+	display: none;
+}
+
+details.gpk-details .gpk-details-chevron {
+	display: inline-block;
+	transition: rotate 150ms ease-out;
+}
+
+details.gpk-details[open] .gpk-details-chevron {
+	rotate: 90deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	details.gpk-details .gpk-details-chevron {
+		transition: none;
+	}
+}
+
 /* Skip-link: osynlig tills den får fokus */
 .skip-link {
 	position: absolute;

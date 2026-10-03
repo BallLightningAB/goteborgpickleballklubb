@@ -1,5 +1,28 @@
 entries:
   - date: "2026-10-03"
+    version: 0.1.3
+    issue: "#3"
+    commit: "pending"
+    status: done
+    title: "feat(meeting): publicerad kallelse till extra årsmötet 2026-10-24"
+    details: |-
+      - MeetingSection renders the board-verbatim kallelse: facts card
+        (date, kl. 16.00, Hisingens Cykelklubbs föreningslokal, Arvid
+        Lindmansgatan 25 F), intro + purposes, then full agenda (13 items
+        with nested a-f officer elections), footnote (röstlängd/rösträtt/
+        övriga ärenden), documents note and greeting inside an accessible
+        <details> element (zero JS, custom chevron via CSS)
+      - Visible callout line: "Vad gäller strån och förslag eftersöks
+        särskilt kassör och revisor."
+      - Discreet header CTA pill "Årsmöte 24 okt" (gold dot, cream bg)
+        replaces the plain Årsmöte nav link; driven by
+        site.extraMeeting.badge
+      - site.extraMeeting extended: time, place, address, badge;
+        copy.meetingNote renamed to meetingLead
+      - I2D3 closed: Google Form whitespace issues verified fixed by club
+
+      Refs: v0.1.3 I3D1 I3D2 I3D3 I3D4 I2D3 kallelse arsmote details
+  - date: "2026-10-03"
     version: 0.1.2
     issue: "#2"
     commit: "3652cff"

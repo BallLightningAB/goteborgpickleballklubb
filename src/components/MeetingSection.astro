@@ -5,19 +5,160 @@ import { site } from "../config/site";
 <section id="arsmote" aria-labelledby="arsmote-rubrik" class="scroll-mt-20">
 	<div class="mx-auto max-w-3xl px-4 py-16 md:py-24">
 		<div
-			class="rounded-2xl border-2 border-gpk-gold bg-gpk-cream px-6 py-10 text-center md:px-10"
+			class="rounded-2xl border-2 border-gpk-gold bg-gpk-cream px-6 py-10 md:px-10"
 		>
-			<h2 id="arsmote-rubrik" class="mb-4 text-3xl md:text-4xl">
-				{site.copy.meetingHeading}
-			</h2>
-			<p
-				class="mb-3 font-bold text-2xl text-gpk-navy-deep italic md:text-3xl"
-			>
-				<time datetime={site.extraMeeting.dateIso}>
-					{site.extraMeeting.label}
-				</time>
-			</p>
-			<p class="text-gpk-navy">{site.copy.meetingNote}</p>
+			<div class="text-center">
+				<h2 id="arsmote-rubrik" class="mb-6 text-3xl md:text-4xl">
+					{site.copy.meetingHeading}
+				</h2>
+				<dl class="mb-6 space-y-1 text-gpk-navy">
+					<div>
+						<dt class="sr-only">Datum</dt>
+						<dd class="font-bold text-2xl text-gpk-navy-deep italic md:text-3xl">
+							<time datetime={site.extraMeeting.dateIso}>
+								{site.extraMeeting.label}
+							</time>
+						</dd>
+					</div>
+					<div>
+						<dt class="sr-only">Tid</dt>
+						<dd class="text-lg">{site.extraMeeting.time}</dd>
+					</div>
+					<div>
+						<dt class="sr-only">Plats</dt>
+						<dd class="text-lg">
+							{site.extraMeeting.place}
+							<br />
+							<span class="text-base">{site.extraMeeting.address}</span>
+						</dd>
+					</div>
+				</dl>
+				<p class="text-gpk-navy">{site.copy.meetingLead}</p>
+			</div>
+
+			<div class="mt-8 text-left leading-relaxed text-gpk-navy">
+				<p>
+					Den 6 september 2026 hölls ett bildandemöte för Göteborg Pickleball
+					Klubb. Interimstyrelsen kallar nu till ett första årsmöte för att:
+				</p>
+				<ul class="mt-3 list-disc space-y-1 pl-6">
+					<li>fastställa de beslut som togs preliminärt på bildandemötet,</li>
+					<li>ta ställning till några justeringar i dessa,</li>
+					<li>
+						välja en ordinarie styrelse fram till det ordinarie årsmötet i
+						mars 2027,
+					</li>
+					<li>fatta beslut i övriga frågor på dagordningen enligt nedan.</li>
+				</ul>
+
+				<details
+					class="gpk-details mt-6 rounded-xl border border-gpk-navy/15 bg-white/60"
+				>
+					<summary
+						class="flex cursor-pointer items-center justify-between gap-3 rounded-xl px-5 py-4 font-semibold text-gpk-navy-deep"
+					>
+						Hela kallelsen – dagordning, rösträtt och handlingar
+						<span
+							aria-hidden="true"
+							class="gpk-details-chevron shrink-0 font-bold text-gpk-gold"
+						>
+							›
+						</span>
+					</summary>
+					<div class="space-y-6 px-5 pb-6">
+						<div>
+							<h3 class="mb-2 text-xl">Dagordning</h3>
+							<ol class="list-decimal space-y-1 pl-6">
+								<li>Mötets öppnande</li>
+								<li>Fastställande av röstlängd (se fotnot)</li>
+								<li>Fråga om mötet har utlysts på rätt sätt</li>
+								<li>Val av mötesordförande</li>
+								<li>Val av mötessekreterare</li>
+								<li>
+									Val av två protokolljusterare och tillika rösträknare.
+									Justerar protokollet tillsammans med mötesordföranden
+								</li>
+								<li>Fastställande av stadgar</li>
+								<li>
+									Verksamhetsberättelse och ekonomisk redovisning för
+									perioden fram till årsmötet i mars 2027
+								</li>
+								<li>Fråga om ansvarsfrihet för interimsstyrelsen</li>
+								<li>
+									Val av ordinarie funktionärer fram till det ordinarie
+									årsmötet i mars 2027:
+									<ol class="mt-1 list-[lower-alpha] space-y-1 pl-6">
+										<li>Föreningens ordförande</li>
+										<li>Föreningens kassör</li>
+										<li>Tre övriga styrelseledamöter</li>
+										<li>En–två suppleanter</li>
+										<li>Revisor</li>
+										<li>
+											Valberedning inför nästa årsmöte, två–fyra personer
+										</li>
+									</ol>
+								</li>
+								<li>
+									Fastställande av medlemsavgift för tiden fram till det
+									ordinarie årsmötet i mars 2027
+								</li>
+								<li>
+									Övriga ärenden från styrelsen och närvarande på mötet (se
+									fotnot)
+								</li>
+								<li>Mötets avslutande</li>
+							</ol>
+						</div>
+
+						<div>
+							<h3 class="mb-2 text-xl">Fotnot</h3>
+							<div class="space-y-2">
+								<p>
+									Man blir officiell medlem när man har betalat
+									medlemsavgift, men medlemsavgiften bestäms först på detta
+									extra årsmöte. Därför gäller följande:
+								</p>
+								<ul class="list-disc space-y-1 pl-6">
+									<li>
+										Röstberättigade är de som närvarar vid fastställandet av
+										röstlängden samt under 2026 fyller lägst 12 år.
+									</li>
+									<li>
+										Berättigade att lägga fram fråga under Övriga ärenden är
+										de som närvarar på mötet samt under 2026 fyller lägst 12
+										år.
+									</li>
+									<li>
+										Inga motioner kan inlämnas inför det extra årsmötet, men
+										det finns utrymme för de närvarande att framföra frågor
+										under Övriga ärenden. Beslut i dessa kan fattas på detta
+										möte eller hänskjutas till beslut vid senare tillfälle.
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div>
+							<h3 class="mb-2 text-xl">Dokument inför mötet</h3>
+							<p>
+								Förslag till stadgar, verksamhetsberättelse och budget
+								publiceras här minst en vecka före mötet.
+							</p>
+						</div>
+
+						<p>
+							Interimstyrelsen för Göteborg Pickleball Klubb hälsar alla
+							pickleballvänner välkomna att dra sitt strå till stacken genom
+							att närvara, lägga sina förslag och ge sin röst!
+						</p>
+					</div>
+				</details>
+
+				<p class="mt-6 text-center font-semibold text-gpk-navy-deep">
+					Vad gäller strån och förslag eftersöks särskilt kassör och
+					revisor.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
