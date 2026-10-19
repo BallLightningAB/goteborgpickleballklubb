@@ -1,5 +1,5 @@
 meta:
-  release: "0.1.4"
+  release: "0.1.5"
   repo: "github.com/BallLightningAB/goteborgpickleballklubb"
   pdd_version: "0.1.1"
   references:
@@ -53,6 +53,8 @@ roadmap:
         - covers: [I3D2] note: "Hela kallelsen ordagrant i MeetingSection: inledning + syften synliga; dagordning, fotnot, dokumentnotis och hälsning i <details>-block (noll JS). Efterlysning kassör/revisor som synlig callout."
         - covers: [I3D3] note: "Dagordning som <ol> med nästlad list-[lower-alpha] för funktionärsval a-f; diskret header-CTA 'Årsmöte 24 okt' ersatte plain nav-länk (site.extraMeeting.badge)."
         - covers: [I3D4] note: "Verifierat: pnpm build OK, astro check 0 fel, biome rent; HTML innehåller details/badge/facts utan href='#'. Visuell mobil/desktop-kontroll återstår hos användaren."
+        - covers: [I3D1, I3D2] note: "2026-10-19 (v0.1.5): Kallelse v2 - ny lokal RF-SISU/Mejerigatan 1 vån 3 med 'Ny möteslokal'-markering (placeNote), agenda utökad till 14 punkter (ny p.4 föredragningslista, p.9 verksamhetsplan+budget), tre OneDrive-dokumentlänkar i config (verifierade anonymt). Benämning 'Extrastämma' i chrome; brödtext ordagrant."
+  next_steps:
     - id: build-gpk-site-v1
       issue: "#1"
       title: "Bygg GPK v1 – statisk ensideswebbplats (Astro + Tailwind v4)"

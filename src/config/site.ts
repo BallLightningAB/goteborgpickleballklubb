@@ -29,6 +29,10 @@ export interface SiteConfig {
 		time: string;
 		place: string;
 		address: string;
+		/** Kort notering under platsen, t.ex. "Ny möteslokal". null = döljs. */
+		placeNote: string | null;
+		/** Möteshandlingar (t.ex. OneDrive-länkar). Tom lista = sektionen döljs. */
+		documents: { label: string; url: string }[];
 		/** Annonseringslist under headern. null = döljs (t.ex. efter mötet). */
 		banner: string | null;
 	};
@@ -104,9 +108,24 @@ export const site: SiteConfig = {
 		dateIso: "2026-10-24",
 		label: "24 oktober 2026",
 		time: "kl. 16.00",
-		place: "Hisingens Cykelklubbs föreningslokal",
-		address: "Arvid Lindmansgatan 25 F",
-		banner: "Extra årsmöte 24 oktober kl. 16.00",
+		place: "RF-SISU Västra Götalands lokaler",
+		address: "Mejerigatan 1, vån 3, Göteborg",
+		placeNote: "Ny möteslokal",
+		documents: [
+			{
+				label: "Stadgar",
+				url: "https://1drv.ms/w/c/e6a2175621996f3b/IQBAGBvaBO8PTJGSQRITaeZFAeasZjMqtvXbiMaQbHhGb3U?e=sazPzW",
+			},
+			{
+				label: "Verksamhetsplan",
+				url: "https://1drv.ms/w/c/e6a2175621996f3b/IQAZsuHqwclqS5tY8QVqSkWyAUTqYPFPbasifxvKeHEwT94?e=FTUdbV",
+			},
+			{
+				label: "Budget",
+				url: "https://1drv.ms/w/c/e6a2175621996f3b/IQAdG-QBVZAvRYbk3KNHWuBKAVYiUzFOlm_Ohh6XQaagrR0?e=wAxncq",
+			},
+		],
+		banner: "Extrastämma 24 oktober kl. 16.00",
 	},
 
 	logo: {
@@ -139,8 +158,8 @@ export const site: SiteConfig = {
 		whatsappIntro:
 			"Information och uppdateringar delas i klubbens medlemschat på WhatsApp. Gå gärna med så håller vi dig uppdaterad om medlemskap och klubbens fortsatta utveckling.",
 		whatsappPending: "Länk till klubbens WhatsApp publiceras snart.",
-		meetingHeading: "Extra årsmöte den 24 oktober 2026",
+		meetingHeading: "Extrastämma den 24 oktober 2026",
 		meetingLead:
-			"Kallelsen är publicerad. Nedan hittar du dagordning, rösträttsregler och information om handlingarna inför mötet.",
+			"Kallelsen är uppdaterad – observera ny möteslokal. Handlingarna inför mötet finns publicerade i kallelsen nedan.",
 	},
 } as const;

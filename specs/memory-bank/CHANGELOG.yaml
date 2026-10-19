@@ -1,4 +1,25 @@
 entries:
+  - date: "2026-10-19"
+    version: 0.1.5
+    issue: "#3"
+    commit: "pending"
+    status: done
+    title: "feat(meeting): kallelse v2 – ny lokal, 14-punkts agenda, dokumentlänkar"
+    details: |-
+      - Kallelse v2 (delad i WhatsApp 2026-10-19) ersätter v1: venue changed
+        to RF-SISU Västra Götalands lokaler, Mejerigatan 1, vån 3; new
+        agenda item 4 "Fastställande av föredragningslista"; item 9 now
+        "Verksamhetsplan och budget"
+      - "Ny möteslokal" marker in facts card (site.extraMeeting.placeNote)
+      - Meeting documents (Stadgar/Verksamhetsplan/Budget) linked to the
+        club's public OneDrive shares via site.extraMeeting.documents –
+        links verified anonymous (HTTP 200 via browser UA); decision:
+        links over subpages since proposals may change before the meeting
+      - Naming: page chrome now says "Extrastämma" (heading, banner, nav);
+        verbatim kallelse body keeps the document's own wording
+      - kallelse source doc updated to v2 with v1 history noted
+
+      Refs: v0.1.5 I3D1 I3D2 extrastamma venue documents onedrive
   - date: "2026-10-03"
     version: 0.1.4
     issue: "#2/#3"

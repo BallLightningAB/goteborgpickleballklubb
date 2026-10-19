@@ -67,11 +67,11 @@ alltid värdena i Vercels UI – de styr.
 ## Återstår (efterarbete)
 
 - [ ] **Organisationsnummer**: lägg till i sidfoten när det finns (issue #2, I2D6).
-- [ ] **Möteshandlingar**: kallelsen lovar stadgar, verksamhetsberättelse och
-      budget på sidan senast en vecka före mötet (2026-10-17).
-- [ ] **Efter årsmötet (2026-10-24)**: sätt `site.extraMeeting.banner` till
-      `null` så släcks annonseringslisten; årsmötesektionen kan då byggas om
+- [ ] **Efter extrastämman (2026-10-24)**: sätt `site.extraMeeting.banner` till
+      `null` så släcks annonseringslisten; stämmosektionen kan då byggas om
       till ordinarie årsmötesinfo.
+- [x] ~~**Möteshandlingar**~~ – klart 2026-10-19 (stadgar, verksamhetsplan och
+      budget länkade via OneDrive i kallelsen, `site.extraMeeting.documents`).
 - [ ] **Logotyp (valfri förbättring)**: `public/media/gpk-logo.png` är en
       genomskinlig PNG-mästare genererad från grundartworket. Ersätt med en
       vektormaster (SVG) om en sådan produceras – uppdatera `site.logo.src`.

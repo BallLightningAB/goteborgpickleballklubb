@@ -4,7 +4,7 @@ import { site } from "../config/site";
 const links = [
 	{ href: "/#intresse", label: "Intresseanmälan" },
 	{ href: "/#whatsapp", label: "WhatsApp" },
-	{ href: "/#arsmote", label: "Årsmöte" },
+	{ href: "/#arsmote", label: "Extrastämma" },
 ];
 ---
 
@@ -30,7 +30,9 @@ const links = [
 			<span class="text-lg tracking-tight">{site.shortName}</span>
 		</a>
 		<nav aria-label="Sidans sektioner">
-			<ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
+			<ul
+				class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium"
+			>
 				{
 					links.map((link) => (
 						<li>
