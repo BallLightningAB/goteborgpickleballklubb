@@ -1,5 +1,17 @@
 entries:
   - date: "2026-10-19"
+    version: 0.1.6
+    issue: "#3"
+    commit: "pending"
+    status: done
+    title: "style(meeting): meetingHeading shortened to 'Extrastämma'"
+    details: |-
+      - h2 reduced from "Extrastämma den 24 oktober 2026" to "Extrastämma" –
+        the date was already prominent in the facts card right below
+        (visual feedback from user)
+
+      Refs: v0.1.6 I3UI heading
+  - date: "2026-10-19"
     version: 0.1.5
     issue: "#3"
     commit: "f56d0a5"

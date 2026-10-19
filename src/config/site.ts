@@ -158,7 +158,7 @@ export const site: SiteConfig = {
 		whatsappIntro:
 			"Information och uppdateringar delas i klubbens medlemschat på WhatsApp. Gå gärna med så håller vi dig uppdaterad om medlemskap och klubbens fortsatta utveckling.",
 		whatsappPending: "Länk till klubbens WhatsApp publiceras snart.",
-		meetingHeading: "Extrastämma den 24 oktober 2026",
+		meetingHeading: "Extrastämma",
 		meetingLead:
 			"Kallelsen är uppdaterad – observera ny möteslokal. Handlingarna inför mötet finns publicerade i kallelsen nedan.",
 	},
