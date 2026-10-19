@@ -2,7 +2,7 @@ entries:
   - date: "2026-10-19"
     version: 0.1.6
     issue: "#3"
-    commit: "pending"
+    commit: "d52e674"
     status: done
     title: "style(meeting): meetingHeading shortened to 'Extrastämma'"
     details: |-
