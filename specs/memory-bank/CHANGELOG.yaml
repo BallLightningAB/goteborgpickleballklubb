@@ -2,7 +2,7 @@ entries:
   - date: "2026-10-19"
     version: 0.1.5
     issue: "#3"
-    commit: "pending"
+    commit: "f56d0a5"
     status: done
     title: "feat(meeting): kallelse v2 – ny lokal, 14-punkts agenda, dokumentlänkar"
     details: |-
